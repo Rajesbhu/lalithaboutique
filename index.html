@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="./style.css">
     <style>
         a{
-            text-decoration:none;
-            text-decoration: none;
+        text-decoration:none;
+        text-decoration: none;
         color:inherit;
         transition: all 0.5s ease-in-out;
         scroll-behavior: smooth;
@@ -37,11 +37,11 @@
         <div class="Header">
             <ul class="lists">
                 <li class="list-items active">Home</li>
-               <a href="#services"> <li class="list-items">Services</li> </a>
+                <li class="list-items"><a href="#services">Services </a></li>
                 <li class="list-items">Pricing </li>
                 <li class="list-items">Contact</li>
                 <li class="list-items">About us</li>
-                <li class="list-items">Book An Appointment</li>
+                <li class="list-items"> <a href='#bookAppointment'> Book An Appointment</a></li>
             </ul>
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
             
@@ -223,7 +223,7 @@
                 </div>
             </div>
         </div>
-        <div class="bookAppointment">
+        <div class="bookAppointment" id="bookAppointment">
             <div class="bookAppointmentContent">
                 <h1 class="bookAppointmentTitle">BOOK AN <br/><span>APPOINTMENT</span> </h1>
                 <p>Get an experience of our services. We Do ladies blouses mainly , try us out</p>
@@ -279,7 +279,7 @@
             <span >Keerthu's Soft Solutions &copy;.</span>
         </div>
          <a  href="https://wa.me/919000474104" class="btnWhatsapp"> <i class="fa-brands fa-whatsapp fa-flip"></i> Whatsapp</a>
-        <button id="scrollUpButton">Scroll Up</button>
+        <!--<button id="scrollUpButton">Scroll Up</button>-->
     </div>
    <script>
     const iconMenu=document.querySelector('.icon');
