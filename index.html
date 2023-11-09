@@ -7,9 +7,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <style>
-        *{
+        a{
             text-decoration:none;
+            text-decoration: none;
+        color:inherit;
+        transition: all 0.5s ease-in-out;
+        scroll-behavior: smooth;
         }
+        body{
+            scroll-behavior: smooth;
+        }
+        #scrollUpButton {
+  position: fixed; /* Fix the button to the bottom of the viewport */
+  bottom: 20px; /* Set the bottom margin */
+  right: 20px; /* Set the right margin */
+  background-color: #333; /* Set the button background color */
+  color: white; /* Set the button text color */
+  padding: 10px 20px; /* Set the button padding */
+  border-radius: 5px; /* Round the button corners */
+  cursor: pointer; /* Set the cursor to pointer on hover */
+}
     </style>
 </head>
 <body>
@@ -20,7 +37,7 @@
         <div class="Header">
             <ul class="lists">
                 <li class="list-items active">Home</li>
-                <li class="list-items">Services</li>
+               <a href="#services"> <li class="list-items">Services</li> </a>
                 <li class="list-items">Pricing </li>
                 <li class="list-items">Contact</li>
                 <li class="list-items">About us</li>
@@ -41,7 +58,7 @@
             <img src="./boti.webp" alt="cloth" />
             
         </div>
-        <div class="services">
+        <div class="services" id='services'>
             <h1 class="servicesTitle">ONE DAY STICHING</h1>
             <div class="serviceCard">
                 <div class="card">
@@ -262,6 +279,7 @@
             <span >Keerthu's Soft Solutions &copy;.</span>
         </div>
          <a  href="https://wa.me/919000474104" class="btnWhatsapp"> <i class="fa-brands fa-whatsapp fa-flip"></i> Whatsapp</a>
+        <button id="scrollUpButton">Scroll Up</button>
     </div>
    <script>
     const iconMenu=document.querySelector('.icon');
@@ -279,7 +297,37 @@
             lists.style.display='none';
         }
 
-    })
+    });
+
+       // For Smooth scrolling effect
+
+           const anchorLinks = document.querySelectorAll('a[href^="#"]');
+//  console.log(anchorLinks);
+for (const link of anchorLinks) {
+  link.addEventListener('click', (event) => {
+    count++;
+    event.preventDefault(); // Prevent default anchor link behavior
+
+    if( count % 2 ==0){
+        header.style.gridArea='1/10/2/12;';
+            lists.style.display='none';
+    }
+
+    const targetSection = document.querySelector(link.getAttribute('href'));
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      }); // Scroll to the target section smoothly
+    }
+  });
+}
+       //scroll up button
+       const scrollUpButton = document.getElementById('scrollUpButton');
+   scrollUpButton.addEventListener('click', () => {
+  //document.body.scrollTop = 0; // Scroll to the top for browsers without smooth scrolling
+  document.documentElement.scrollTop = 0; /* Scroll to the top for browsers with smooth scrolling */
+});
    </script>
 </body>
 </html>
