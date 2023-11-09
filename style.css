@@ -746,11 +746,13 @@
     background-color: rgba(128, 7, 57, 0.623);
     
    }
-   .footer{
-    width:200px;
-   }
+   
    .footer span{
-    color: #111;
+    color: #c527ce;
+	   padding:10px;
+	   font-size:12px;
+	   font-family:Poppins , Lato;
+	   font-weight:300;
    }
  }
  @media screen and (min-width : 801px ) and (max-width : 1200px){
