@@ -612,18 +612,30 @@ a{
             align-items: center;
             background-color: rgba(0,0,0,0.35);
             border-bottom: 1px solid #1f1f1f;
-            gap:15px;
+            gap:0;
             
         }
         .lists .list-items{
             text-transform: uppercase;
+            display: block;
+            background: #7f4980;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #f1eded;
+            color: white;
             
+        }
+        .lists .list-items.active{
+            border-bottom:1px solid #f1eded; ;
         }
         .icon{
             display:block;
             position:absolute;
-            top:30px;
+            top:10px;
             right:30px;
+	    border-radius:5px;
+		color:teak;
         }
         .content{
             flex-direction: column;
